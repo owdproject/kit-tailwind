@@ -1,0 +1,59 @@
+{
+  "name": "@owdproject/kit-tailwind",
+  "version": "0.1.0",
+  "description": "Base Tailwind CSS configuration kit for Open Web Desktop agnostic apps",
+  "keywords": [
+    "owd-client",
+    "owd-kits",
+    "owd-modules",
+    "tailwind"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/types.d.mts",
+      "development": "./src/module.ts",
+      "import": "./dist/module.mjs",
+      "default": "./dist/module.mjs"
+    },
+    "./kit/registerTailwindPath": {
+      "types": "./src/kit/registerTailwindPath.ts",
+      "development": "./src/kit/registerTailwindPath.ts",
+      "import": "./src/kit/registerTailwindPath.ts",
+      "default": "./src/kit/registerTailwindPath.ts"
+    }
+  },
+  "main": "./dist/module.mjs",
+  "typesVersions": {
+    "*": {
+      ".": ["./dist/types.d.mts"],
+      "kit/registerTailwindPath": ["./src/kit/registerTailwindPath.ts"]
+    }
+  },
+  "files": ["dist", "src"],
+  "nx": {
+    "name": "kit-tailwind"
+  },
+  "scripts": {
+    "prepack": "nuxt-module-build build",
+    "dev": "pnpm run dev:prepare",
+    "dev:prepare": "nuxt-module-build build --stub"
+  },
+  "dependencies": {
+    "@nuxt/kit": "^4.4.4",
+    "@nuxtjs/tailwindcss": "^6.12.2"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "^3.2.4",
+    "@nuxt/module-builder": "^1.0.2",
+    "@nuxt/schema": "^4.4.4",
+    "@owdproject/core": "workspace:*",
+    "nuxt": "^4.4.4",
+    "typescript": "catalog:"
+  },
+  "peerDependencies": {
+    "@owdproject/core": "^3.4.0",
+    "nuxt": "^4.4.4"
+  }
+}

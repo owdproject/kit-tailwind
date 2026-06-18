@@ -1,2 +1,0 @@
-export * from "/home/dxlliv/Development/Projects/OWD/client/packages/kit-tailwind/src/module.js";
-export { default } from "/home/dxlliv/Development/Projects/OWD/client/packages/kit-tailwind/src/module.js";

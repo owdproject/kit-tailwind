@@ -27,14 +27,18 @@
   "main": "./dist/module.mjs",
   "typesVersions": {
     "*": {
-      ".": ["./dist/types.d.mts"],
-      "kit/registerTailwindPath": ["./src/kit/registerTailwindPath.ts"]
+      ".": [
+        "./dist/types.d.mts"
+      ],
+      "kit/registerTailwindPath": [
+        "./src/kit/registerTailwindPath.ts"
+      ]
     }
   },
-  "files": ["dist", "src"],
-  "nx": {
-    "name": "kit-tailwind"
-  },
+  "files": [
+    "dist",
+    "src"
+  ],
   "scripts": {
     "prepack": "nuxt-module-build build",
     "dev": "pnpm run dev:prepare",
